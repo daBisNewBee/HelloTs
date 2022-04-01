@@ -1,0 +1,35 @@
+/**
+在VSCode中配置Debugger
+
+这里每一个"name"的配置，可以在"运行和调试"里找到
+*/ 
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch Edge",
+            "request": "launch",
+            "type": "pwa-msedge",
+            // "url": "http://localhost:8080", // 会打不开
+            "url": "file:///Users/user/Documents/git/vscode/helloTs/helloweb.html",
+            "webRoot": "${workspaceFolder}"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${file}",
+            // "program": "${workspaceFolder}/helloworld.ts", // 告诉Debugger入口在哪里
+            // "preLaunchTask": "tsc: build - tsconfig.json",
+            "outFiles": [
+                "${workspaceFolder}/**/*.js" // 告诉Debugger去哪里找js
+            ]
+        }
+    ]
+}

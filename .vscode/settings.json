@@ -1,0 +1,7 @@
+// 工作区配置文件
+{
+    "files.exclude": {
+        "**/*.js": { "when": "$(basename).ts" }, // 隐藏同目录下的js后缀文件，避免杂乱
+        "**/**.js": { "when": "$(basename).tsx" },
+    }
+}

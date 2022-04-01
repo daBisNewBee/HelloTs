@@ -1,0 +1,10 @@
+// 这个文件告诉“tsc”的具体编译参数，而“tsc xxx.ts” 使用的默认参数
+{
+    "compilerOptions": {
+        "target": "ES5",
+        "module": "commonjs",
+        "outDir": "out", // 输出产物目录
+        "sourceMap": true, // VSCode debug需要的产物：helloworld.map
+        "allowJs": true,  // 允许混合的ts、js项目
+    }
+}
