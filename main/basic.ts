@@ -24,6 +24,7 @@ const tom: Cat = {
 
 // “类型断言”的用法: 值 as 类型
 // 发生在编译期
+// TS之类型断言: https://blog.csdn.net/lhjuejiang/article/details/116595195
 function swim(animal: Cat| Fish) {
     // 如果在不确定类型的时候就想访问一个类型确定的属性和方法，就需要【断言】
     // 将变量animal断言为Fish类型，那么访问其swim属性，就可以通过编译器的检查。
