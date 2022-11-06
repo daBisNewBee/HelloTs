@@ -1,7 +1,9 @@
  11. 报错：
- C:\Users\liuwenbin\git\HelloTs\main> tsc .\promise.ts
+-  C:\Users\liuwenbin\git\HelloTs\main> tsc .\promise.ts
 "promise.ts:2:16 - error TS2585: 'Promise' only refers to a type, but is being used as a value here. Do you need to change your target library? Try changing the 'lib' compiler option to es2015 or later."
-解决：npm install @types/node
+- 解决：npm install @types/node
+- 原因：“在node中使用typescript时，这个包用来加载所有的类型定义”
+- [NodeJs中的@types/node包是什么？](https://www.zhblog.net/qa/package-in-nodejs.html)
 
 ## 几个 “es5 es6 es2015” 概念
 
