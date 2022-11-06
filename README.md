@@ -36,3 +36,13 @@
     - 基于Chrome v8，v8用来解析执行JS，v8基于ECMAScript
     - 没有DOM、BOM操作，只保留JavaScript的语法核心ES，并且增加了事件驱动的非阻塞 I/O 模型，使其轻量级和高效
     - 作为服务运行在windows、linux、mac，**把js的角色从前台开发转移到了后台开发**
+    - 本质： v8 + libuv + http/fs 等API的封装
+
+
+# 好奇：js的效率不高，为什么要搞个nodejs让其跑在服务端？
+1. 符合事件驱动(web的服务器的要点：事件驱动、非阻塞IO)
+    - libevent、libev、libuv三个网络库，都是c语言实现的异步事件库
+    - libuv: :开发node的过程中需要一个跨平台的事件库，他们首选了libev，但又要支持Windows，故重新封装了一套，linux下用libev实现，Windows下用IOCP实现；
+2. 高性能(当时，第二次浏览器大战也渐渐分出高下,Chrome浏览器的JavaScript引擎V8摘得性能第一的桂冠)
+3. 没有历史包袱(js很多年一直存在与前端，后端部分一直没有市场)
+4. 开发门槛低，对前端dev友好
