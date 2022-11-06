@@ -5,8 +5,7 @@
 - 原因：“在node中使用typescript时，这个包用来加载所有的类型定义”
 - [NodeJs中的@types/node包是什么？](https://www.zhblog.net/qa/package-in-nodejs.html)
 
-## 几个 “es5 es6 es2015” 概念
-
+# 几个 “es5 es6 es2015” 概念
 #### ES6 与 ECMAScript 2015 的关系:
 1. ECMAScript 5.1, 2011年发布
 2. ES6： 是一个泛指，5.1版以后的JavaScript的下一代标准，包括了ES2015、ES2016、ES2017等
@@ -20,6 +19,20 @@
 2. ECMAScript 2.0 1998
 3. ECMAScript 3.0 1999 
     - 巨大的成功，奠定了 **JavaScript 语言的基本语法**，以后的版本完全继承，初学者一开始学习 JavaScript，其实就是在学 3.0 版的语法。
-4. [x]ES4 2000, 没有通过，因为太激进，大部分内容被 ES6 继承
-5. ES5 2009, 其实是 ES3.1
+4. [x] ECMAScript 4.0 2000, 没有通过，因为太激进，大部分内容被 ES6 继承
+5. ECMAScript 5.0 2009, 其实是 ES3.1
 6. **ECMAScript 6.0 2015，从开始指定到最后发布，用了15年**
+
+#### ECMAScript和JavaScript的区别
+**"JavaScript = ECMAScript + DOM + BOM"**
+- JavaScript 
+    - 其语法的标准化组织是ECMA
+- DOM 
+    - 标准化组织是W3C
+- BOM 
+    - 缺少标准化组织，最初是Netscape浏览器标准的一部分
+    - 常见对象：window、location、history、navigator、screen、document、frames
+- Node.js
+    - 基于Chrome v8，v8用来解析执行JS，v8基于ECMAScript
+    - 没有DOM、BOM操作，只保留JavaScript的语法核心ES，并且增加了事件驱动的非阻塞 I/O 模型，使其轻量级和高效
+    - 作为服务运行在windows、linux、mac，**把js的角色从前台开发转移到了后台开发**

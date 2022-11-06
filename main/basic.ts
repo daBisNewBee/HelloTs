@@ -1,3 +1,7 @@
+require('@babel/register');
+require('./babel_test_es6.ts');
+// @babel/register模块改写require命令，为它加上一个钩子。此后，每当使用require加载.js、.jsx、.es和.es6后缀名的文件，就会先用 Babel 进行转码
+
 // const foo: number = 1;
 // foo.length = 1;
 // window.foo = 1;
